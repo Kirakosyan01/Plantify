@@ -1,0 +1,365 @@
+@font-face {
+  font-family: steppe;
+  src: url("../../assets/fonts/Steppe.otf");
+}
+@font-face {
+  font-family: chillax;
+  src: url("../../assets/fonts/Chillax-Medium.otf");
+}
+@font-face {
+  font-family: dmSans;
+  src: url("../../assets/fonts/DMSans-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #004f44;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 0px 2px #eff7f5;
+  z-index: 99;
+}
+nav .wrapper {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #004f44;
+}
+nav .wrapper ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0 40px;
+  list-style: none;
+  width: 340px;
+}
+nav .wrapper ul li .shop,
+nav .wrapper ul li .products,
+nav .wrapper ul li .fertilizer,
+nav .wrapper ul li .guide {
+  font-family: dmSans;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s;
+}
+nav .wrapper ul li .shop:hover,
+nav .wrapper ul li .products:hover,
+nav .wrapper ul li .fertilizer:hover,
+nav .wrapper ul li .guide:hover {
+  padding: 10px;
+  background-color: #eff7f5;
+  color: #004f44;
+  border-radius: 6px;
+}
+
+main header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 104px;
+  background-color: #004f44;
+}
+main header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  width: 100%;
+  background-color: #004f44;
+}
+@media only screen and (max-width: 1254px) {
+  main header .wrapper {
+    justify-content: center;
+    row-gap: 80px;
+  }
+}
+main header .wrapper .headerInfo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px 0;
+  flex-direction: column;
+  width: 420px;
+  margin-right: 20px;
+}
+main header .wrapper .headerInfo h1 {
+  font-family: chillax;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 112%;
+  letter-spacing: 0.02em;
+  color: #eff7f5;
+}
+main header .wrapper .headerInfo p {
+  font-family: steppe;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 175%;
+  letter-spacing: 0.02em;
+  color: #eff7f5;
+}
+main header .wrapper .headerInfo .headerBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 43px;
+  flex-direction: row;
+}
+main header .wrapper .headerInfo .headerBtn .shopBtn {
+  font-family: dmSans;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  background-color: #eff7f5;
+  padding: 19px 41px;
+  color: #004f44;
+  border-radius: 3px;
+  border: 1px solid #004f44;
+  transition: all 0.3s;
+}
+main header .wrapper .headerInfo .headerBtn .shopBtn:hover {
+  border-color: #eff7f5;
+  color: #eff7f5;
+  background-color: #004f44;
+}
+main header .wrapper .headerInfo .headerBtn .exploreBtn {
+  font-family: steppe;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #eff7f5;
+  text-decoration: none;
+  border: 1px solid #004f44;
+  border-radius: 6px;
+  padding: 10px 15px;
+  transition: all 0.3s;
+}
+main header .wrapper .headerInfo .headerBtn .exploreBtn:hover {
+  border: 1px solid #eff7f5;
+}
+@media only screen and (max-width: 1254px) {
+  main header .wrapper .headerInfo {
+    width: 100%;
+  }
+}
+main header .wrapper .headerCatalog {
+  display: flex;
+  gap: 0 4px;
+  flex-direction: row;
+}
+main header .wrapper .headerCatalog .newPopular .new {
+  position: relative;
+}
+main header .wrapper .headerCatalog .newPopular .new a {
+  padding: 7px 15px;
+  background-color: #004f44;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  text-decoration: none;
+  color: #fff;
+  font-family: steppe;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+main header .wrapper .headerCatalog .newPopular .popular {
+  position: relative;
+}
+main header .wrapper .headerCatalog .newPopular .popular a {
+  padding: 7px 15px;
+  background-color: #004f44;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  text-decoration: none;
+  color: #fff;
+  font-family: steppe;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+main header .wrapper .headerCatalog .newPopular .popular .pattern {
+  position: absolute;
+  top: 70%;
+  left: -17%;
+}
+main header .wrapper .headerCatalog .featured {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-image: url("../assets/images/image 1.png");
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 380px;
+}
+main header .wrapper .headerCatalog .featured .featuredBtn {
+  padding: 7px 15px;
+  background-color: #004f44;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  text-decoration: none;
+  color: #fff;
+  font-family: steppe;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+}
+main header .wrapper .headerCatalog .featured .forGradient {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(179deg, rgba(46, 64, 61, 0) 32.02%, #234a45 92.82%);
+  padding-bottom: 26px;
+}
+main header .wrapper .headerCatalog .featured .forGradient h2 {
+  font-family: steppe;
+  font-size: 28px;
+  font-weight: 400;
+  color: #eff7f5;
+  padding-bottom: 8px;
+}
+main header .wrapper .headerCatalog .featured .forGradient p {
+  font-family: steppe;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 129%;
+  letter-spacing: 0.02em;
+  color: #eff7f5;
+  max-width: 327px;
+}
+main header .wrapper .headerCatalog .featured .forGradient .readMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: steppe;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.27em;
+  padding: 17px 115px;
+  margin-top: 18px;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #eff7f5;
+  color: #004f44;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+main header .wrapper .headerCatalog .featured .forGradient .readMore:hover {
+  background-color: #004f44;
+  border: 1px solid #eff7f5;
+  color: #eff7f5;
+}
+main .buyingSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 104px;
+}
+main .buyingSection .wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1440px;
+  width: 100%;
+}
+main .buyingSection .wrapper .viewAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 48px;
+}
+main .buyingSection .wrapper .viewAll .f-ed {
+  font-family: steppe;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: #004f44;
+}
+main .buyingSection .wrapper .viewAll .vAll {
+  font-family: steppe;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #004f44;
+  text-decoration: none;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+main .buyingSection .wrapper .viewAll .vAll:hover {
+  border: 1px solid #004f44;
+  border-radius: 6px;
+  padding: 5px;
+}
+main .buyingSection .wrapper .cardsDiv {
+  display: flex;
+  align-items: center;
+  gap: 0 28px;
+  flex-direction: row;
+}
+main .buyingSection .wrapper .cardsDiv .productCard {
+  display: flex;
+  flex-direction: column;
+}
+main .buyingSection .wrapper .cardsDiv .productCard .productName {
+  display: flex;
+  justify-content: space-between;
+}
+main .buyingSection .wrapper .cardsDiv .productCard .productName p {
+  font-family: steppe;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #004f44;
+  padding-top: 20px;
+  padding-bottom: 28px;
+}
+main .buyingSection .wrapper .cardsDiv .productCard .productBuy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productPotColor {
+  display: flex;
+  gap: 8px 0;
+  flex-direction: column;
+}
+main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productPotColor .productPotColorP {
+  font-family: steppe;
+  font-size: 16px;
+  font-weight: 400;
+}
+main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productButton #productBuyButton {
+  font-family: steppe;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 8px 24px;
+  background-color: #fff;
+  border: 1px solid #004f44;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productButton #productBuyButton:hover {
+  background-color: #004f44;
+  color: #fff;
+}/*# sourceMappingURL=index.css.map */

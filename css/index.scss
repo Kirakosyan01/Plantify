@@ -1,0 +1,269 @@
+@use "./modules/index" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  @include my-flex(center, center, null, null, null);
+  background-color: #004f44;
+  padding: 5px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 0px 2px #eff7f5;
+  z-index: 99;
+  .wrapper {
+    max-width: 1440px;
+    width: 100%;
+    @include my-flex(space-between, center, null, null, null);
+    background-color: #004f44;
+    ul {
+      @include my-flex(flex-end, null, 0 40px, null, null);
+      list-style: none;
+      width: 340px;
+      li {
+        .shop,
+        .products,
+        .fertilizer,
+        .guide {
+          @include my-font(dmSans, 16px, 400, null, null);
+          text-decoration: none;
+          color: #fff;
+          transition: all 0.3s;
+          &:hover {
+            padding: 10px;
+            background-color: #eff7f5;
+            color: #004f44;
+            border-radius: 6px;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  header {
+    @include my-flex(center, center, null, null, null);
+    padding: 104px;
+    background-color: #004f44;
+    .wrapper {
+      @include my-flex(space-between, center, null, null, wrap);
+      max-width: 1440px;
+      width: 100%;
+      background-color: #004f44;
+      @media only screen and (max-width: 1254px){
+        justify-content: center;
+        row-gap: 80px;
+      };
+      .headerInfo {
+        @include my-flex(center, center, 32px 0, column, null);
+        width: 420px;
+        margin-right: 20px;
+        h1 {
+          @include my-font(chillax, 64px, 500, 112%, 0.02em);
+          color: #eff7f5;
+        }
+        p {
+          @include my-font(steppe, 16px, 400, 175%, 0.02em);
+          color: #eff7f5;
+        }
+        .headerBtn {
+          @include my-flex(center, center, 0 43px, row, null);
+          .shopBtn {
+            @include my-font(dmSans, 16px, 400, null, 0.01em);
+            text-decoration: none;
+            background-color: #eff7f5;
+            padding: 19px 41px;
+            color: #004f44;
+            border-radius: 3px;
+            border: 1px solid #004f44;
+            transition: all 0.3s;
+            &:hover {
+              border-color: #eff7f5;
+              color: #eff7f5;
+              background-color: #004f44;
+            }
+          }
+          .exploreBtn {
+            @include my-font(steppe, 16px, 400, null, 0.02em);
+            color: #eff7f5;
+            text-decoration: none;
+            border: 1px solid #004f44;
+            border-radius: 6px;
+            padding: 10px 15px;
+            transition: all 0.3s;
+            &:hover {
+              border: 1px solid #eff7f5;
+            }
+          }
+        }
+        @media only screen and (max-width: 1254px){
+            width: 100%;
+        }
+      }
+      .headerCatalog {
+        @include my-flex(null, null, 0 4px, row, null);
+        .newPopular {
+          .new {
+            position: relative;
+            a {
+              padding: 7px 15px;
+              background-color: #004f44;
+              position: absolute;
+              top: 5%;
+              left: 5%;
+              text-decoration: none;
+              color: #fff;
+              @include my-font(steppe, 12px, 400, null, 0.08em);
+            }
+          }
+          .popular {
+            position: relative;
+            a {
+              padding: 7px 15px;
+              background-color: #004f44;
+              position: absolute;
+              top: 5%;
+              left: 5%;
+              text-decoration: none;
+              color: #fff;
+              @include my-font(steppe, 12px, 400, null, 0.08em);
+            }
+            .pattern{
+                position: absolute;
+                top: 70%;
+                left: -17%;
+            }
+          }
+        }
+        .featured {
+          @include my-flex(center, flex-end, null, null, null);
+          background-image: url("../assets/images/image\ 1.png");
+          background-size: auto;
+          background-repeat: no-repeat;
+          position: relative;
+          width: 380px;
+          .featuredBtn {
+            padding: 7px 15px;
+            background-color: #004f44;
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            text-decoration: none;
+            color: #fff;
+            @include my-font(steppe, 12px, 400, null, 0.08em);
+          }
+          .forGradient {
+            @include my-flex(flex-end, center, null, column, null);
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+              179deg,
+              rgba(46, 64, 61, 0) 32.02%,
+              #234a45 92.82%
+            );
+            padding-bottom: 26px;
+            h2 {
+              @include my-font(steppe, 28px, 400, null, null);
+              color: #eff7f5;
+              padding-bottom: 8px;
+            }
+            p {
+              @include my-font(steppe, 14px, 400, 129%, 0.02em);
+              color: #eff7f5;
+              max-width: 327px;
+            }
+            .readMore {
+              @include my-flex(center, center, null, null, null);
+              @include my-font(steppe, 12px, 400, null, 0.27em);
+              padding: 17px 115px;
+              margin-top: 18px;
+              text-decoration: none;
+              background-color: #fff;
+              border: 1px solid #eff7f5;
+              color: #004f44;
+              border-radius: 3px;
+              transition: all 0.3s;
+              &:hover{
+                background-color: #004f44;
+                border: 1px solid #eff7f5;
+                color: #eff7f5;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .buyingSection{
+    @include my-flex(center, center, null, null, null);
+    padding: 104px;
+    .wrapper{
+      @include my-flex(null, center, null, column, null);
+      max-width: 1440px;
+      width: 100%;
+      .viewAll{
+        @include my-flex(space-between, center, null, row, null);
+        width: 100%;
+        padding-bottom: 48px;
+        .f-ed{
+          @include my-font(steppe, 40px, 400, null, 0.01em);
+          color: #004f44;
+        }
+        .vAll{
+          @include my-font(steppe, 24px, 400, null, 0.02em);
+          color: #004f44;
+          text-decoration: none;
+          border: 1px solid #fff;
+          transition: all 0.3s;
+          &:hover{
+            border: 1px solid #004f44;
+            border-radius: 6px;
+            padding: 5px;
+          }
+        }
+      }
+      .cardsDiv{
+        @include my-flex(null, center, 0 28px, row, null);
+        .productCard{
+          @include my-flex(null, null, null, column, null);
+            .productName{
+              @include my-flex(space-between, null, null, null, null);
+              p{
+                @include my-font(steppe, 20px, 400, null, 0.02em);
+                color: #004f44;
+                padding-top: 20px;
+                padding-bottom: 28px;
+              }
+            }
+            .productBuy{
+              @include my-flex(space-between, center, null, null, null);
+              .productPotColor{
+                @include my-flex(null, null, 8px 0, column, null);
+                .productPotColorP{
+                  @include my-font(steppe, 16px, 400, null, null);
+                }
+              }
+              .productButton{
+                #productBuyButton{
+                  @include my-font(steppe, 16px, 400, null, null);
+                  padding: 8px 24px;
+                  background-color: #fff;
+                  border: 1px solid #004f44;
+                  cursor: pointer;
+                  transition: all 0.3s;
+                  &:hover{
+                    background-color: #004f44;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+        }
+      }
+    }
+  }
+}
