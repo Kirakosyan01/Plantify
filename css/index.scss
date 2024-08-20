@@ -202,7 +202,7 @@ main {
     @include my-flex(center, center, null, null, null);
     padding: 104px;
     .wrapper{
-      @include my-flex(null, center, null, column, null);
+      @include my-flex(null, null, null, column, null);
       max-width: 1440px;
       width: 100%;
       .viewAll{
@@ -226,42 +226,74 @@ main {
           }
         }
       }
-      .cardsDiv{
-        @include my-flex(null, center, 0 28px, row, null);
-        .productCard{
-          @include my-flex(null, null, null, column, null);
-            .productName{
-              @include my-flex(space-between, null, null, null, null);
-              p{
-                @include my-font(steppe, 20px, 400, null, 0.02em);
-                color: #004f44;
-                padding-top: 20px;
-                padding-bottom: 28px;
-              }
-            }
-            .productBuy{
-              @include my-flex(space-between, center, null, null, null);
-              .productPotColor{
-                @include my-flex(null, null, 8px 0, column, null);
-                .productPotColorP{
-                  @include my-font(steppe, 16px, 400, null, null);
-                }
-              }
-              .productButton{
-                #productBuyButton{
-                  @include my-font(steppe, 16px, 400, null, null);
-                  padding: 8px 24px;
-                  background-color: #fff;
-                  border: 1px solid #004f44;
-                  cursor: pointer;
-                  transition: all 0.3s;
-                  &:hover{
-                    background-color: #004f44;
-                    color: #fff;
+      .SliderContainer{
+        position: relative;
+        overflow: hidden;
+        .slider{
+          .sliderTrack{
+            @include my-flex(null, center, 0 28px, row, null);
+            transition: transform 0.4s ease-in-out;
+            .productCard{
+              @include my-flex(null, null, null, column, null);
+                .productName{
+                  @include my-flex(space-between, null, null, null, null);
+                  p{
+                    @include my-font(steppe, 20px, 400, null, 0.02em);
+                    color: #004f44;
+                    padding-top: 20px;
+                    padding-bottom: 28px;
                   }
                 }
-              }
+                .productBuy{
+                  @include my-flex(space-between, center, null, null, null);
+                  .productPotColor{
+                    @include my-flex(null, null, 8px 0, column, null);
+                    .productPotColorP{
+                      @include my-font(steppe, 16px, 400, null, null);
+                    }
+                  }
+                  .productButton{
+                    #productBuyButton{
+                      @include my-font(steppe, 16px, 400, null, null);
+                      padding: 8px 24px;
+                      background-color: #fff;
+                      border: 1px solid #004f44;
+                      cursor: pointer;
+                      transition: all 0.3s;
+                      &:hover{
+                        background-color: #004f44;
+                        color: #fff;
+                      }
+                    }
+                  }
+                }
             }
+          }
+        }
+        .btnArrows{
+          .sliderControls{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            border: none;
+            padding: 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1;
+          }
+          .sliderControls.left{
+            left: 10px;
+            display: none;
+          }
+          .sliderControls.left:active{
+            scale: 1.1;
+          }
+          .sliderControls.right{
+            right: 10px;
+          }
+          .sliderControls.right:active{
+            scale: 1.1;
+          }
         }
       }
     }

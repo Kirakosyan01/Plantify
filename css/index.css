@@ -276,7 +276,6 @@ main .buyingSection {
 }
 main .buyingSection .wrapper {
   display: flex;
-  align-items: center;
   flex-direction: column;
   max-width: 1440px;
   width: 100%;
@@ -311,21 +310,26 @@ main .buyingSection .wrapper .viewAll .vAll:hover {
   border-radius: 6px;
   padding: 5px;
 }
-main .buyingSection .wrapper .cardsDiv {
+main .buyingSection .wrapper .SliderContainer {
+  position: relative;
+  overflow: hidden;
+}
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack {
   display: flex;
   align-items: center;
   gap: 0 28px;
   flex-direction: row;
+  transition: transform 0.4s ease-in-out;
 }
-main .buyingSection .wrapper .cardsDiv .productCard {
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard {
   display: flex;
   flex-direction: column;
 }
-main .buyingSection .wrapper .cardsDiv .productCard .productName {
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard .productName {
   display: flex;
   justify-content: space-between;
 }
-main .buyingSection .wrapper .cardsDiv .productCard .productName p {
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard .productName p {
   font-family: steppe;
   font-size: 20px;
   font-weight: 400;
@@ -334,22 +338,22 @@ main .buyingSection .wrapper .cardsDiv .productCard .productName p {
   padding-top: 20px;
   padding-bottom: 28px;
 }
-main .buyingSection .wrapper .cardsDiv .productCard .productBuy {
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard .productBuy {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productPotColor {
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard .productBuy .productPotColor {
   display: flex;
   gap: 8px 0;
   flex-direction: column;
 }
-main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productPotColor .productPotColorP {
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard .productBuy .productPotColor .productPotColorP {
   font-family: steppe;
   font-size: 16px;
   font-weight: 400;
 }
-main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productButton #productBuyButton {
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard .productBuy .productButton #productBuyButton {
   font-family: steppe;
   font-size: 16px;
   font-weight: 400;
@@ -359,7 +363,30 @@ main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productButton #
   cursor: pointer;
   transition: all 0.3s;
 }
-main .buyingSection .wrapper .cardsDiv .productCard .productBuy .productButton #productBuyButton:hover {
+main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard .productBuy .productButton #productBuyButton:hover {
   background-color: #004f44;
   color: #fff;
+}
+main .buyingSection .wrapper .SliderContainer .btnArrows .sliderControls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1;
+}
+main .buyingSection .wrapper .SliderContainer .btnArrows .sliderControls.left {
+  left: 10px;
+  display: none;
+}
+main .buyingSection .wrapper .SliderContainer .btnArrows .sliderControls.left:active {
+  scale: 1.1;
+}
+main .buyingSection .wrapper .SliderContainer .btnArrows .sliderControls.right {
+  right: 10px;
+}
+main .buyingSection .wrapper .SliderContainer .btnArrows .sliderControls.right:active {
+  scale: 1.1;
 }/*# sourceMappingURL=index.css.map */
