@@ -319,7 +319,7 @@ main .buyingSection .wrapper .SliderContainer .slider .sliderTrack {
   align-items: center;
   gap: 0 28px;
   flex-direction: row;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 main .buyingSection .wrapper .SliderContainer .slider .sliderTrack .productCard {
   display: flex;
@@ -372,7 +372,6 @@ main .buyingSection .wrapper .SliderContainer .btnArrows .sliderControls {
   top: 50%;
   transform: translateY(-50%);
   border: none;
-  padding: 12px;
   border-radius: 50%;
   cursor: pointer;
   z-index: 1;
@@ -388,5 +387,31 @@ main .buyingSection .wrapper .SliderContainer .btnArrows .sliderControls.right {
   right: 10px;
 }
 main .buyingSection .wrapper .SliderContainer .btnArrows .sliderControls.right:active {
+  scale: 1.1;
+}
+main .inputPlace {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 104px 104px 104px;
+}
+main .inputPlace .wrapper {
+  max-width: 1440px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F3FFFC;
+}
+main .inputPlace .wrapper .inputDiv {
+  padding: 85px 141px;
+}
+main .inputPlace .wrapper .inputDiv .searchSettings {
+  padding: 7px;
+  border: 1px solid #004f44;
+  background-color: #fff;
+  cursor: pointer;
+}
+main .inputPlace .wrapper .inputDiv .searchSettings:active {
   scale: 1.1;
 }/*# sourceMappingURL=index.css.map */
