@@ -405,13 +405,4 @@ main .inputPlace .wrapper {
 }
 main .inputPlace .wrapper .inputDiv {
   padding: 85px 141px;
-}
-main .inputPlace .wrapper .inputDiv .searchSettings {
-  padding: 7px;
-  border: 1px solid #004f44;
-  background-color: #fff;
-  cursor: pointer;
-}
-main .inputPlace .wrapper .inputDiv .searchSettings:active {
-  scale: 1.1;
 }/*# sourceMappingURL=index.css.map */
