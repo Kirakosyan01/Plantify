@@ -49,6 +49,7 @@ main {
     @include my-flex(center, center, null, null, null);
     padding: 104px;
     background-color: #004f44;
+    position: relative;
     .wrapper {
       @include my-flex(space-between, center, null, null, wrap);
       max-width: 1440px;
@@ -197,6 +198,46 @@ main {
         }
       }
     }
+    aside{
+      @include my-flex(flex-start, center, 30px 0, column, null);
+      padding: 16px;
+      overflow-y: auto;
+      width: 260px;
+      height: 450px;
+      position: fixed;
+      opacity: 0;
+      right: 15px;
+      top: 90px;
+      border-radius: 4px;
+      z-index: 10;
+      box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.5);
+      background-color: #F3FFFC;
+        p{
+          @include my-font(chillax, 24px, 500, 112%, 0.02em);
+          color: #004f44;
+          border-bottom: 1px solid #004f44;
+        }
+        ul{
+          @include my-font(chillax, 16px, 400, 112%, 0.02em);
+          color: #004f44;
+          width: 100%;
+          height: 228px;
+          list-style: none;
+          border-bottom: 1px solid #004f44;
+          padding-bottom: 10px;
+          display: flex;
+          flex-direction: column;
+          row-gap: 10px;
+          li{
+            .productImg{
+              width: 100px;
+            }
+            .trashImg{
+              width: 30px;
+            }
+          }
+        }
+    }
   }
   .buyingSection {
     @include my-flex(center, center, null, null, null);
@@ -253,7 +294,7 @@ main {
                   }
                 }
                 .productButton {
-                  #productBuyButton {
+                  .productBuyButton {
                     @include my-font(steppe, 16px, 400, null, null);
                     padding: 8px 24px;
                     background-color: #fff;
@@ -294,19 +335,6 @@ main {
             scale: 1.1;
           }
         }
-      }
-    }
-  }
-  .inputPlace {
-    @include my-flex(center, center, null, null, null);
-    padding: 0 104px 104px 104px;
-    .wrapper {
-      max-width: 1440px;
-      width: 100%;
-      @include my-flex(space-between, center, null, null, null);
-      background-color: #F3FFFC;
-      .inputDiv {
-        padding: 85px 141px;
       }
     }
   }
